@@ -1,0 +1,108 @@
+@import '../Global-styles/_mixin';
+@import '../../components/Global-styles/_variables';
+.hero-wrapper {
+    position: relative;
+    padding-top: 41.7%;
+    & .bg-images {
+        position: absolute;
+        inset: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    & .hero-content-heading {
+        text-align: center;
+        & h1 {
+            font-size: 5rem;
+            color: $color-white;
+            font-weight: 700;
+        }
+        & p {
+            color: $color-white;
+            font-size: 1.8rem;
+            margin: 0;
+            font-weight: 500;
+        }
+    }
+    & .form-search {
+        padding: 20px 20px 0;
+        margin-bottom: 50px;
+        & .search-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            & .input-item {
+               background-color: white;
+               @include flex-content-items(space-between,center);
+               & input, select {
+                    padding : 10px;
+                    background-color: transparent;
+                    flex: 1;
+                    font-size: $text-md;
+                    color: #555555;
+               }
+               & ~ .input-item {
+                margin-left: 24px;
+               }
+               & span {
+                font-size: 2rem;
+                padding: 5px 10px;
+                color: rgb(175, 173, 173);
+                @include flex-content-items(center,center);
+               }
+            }
+            & .btn-search {
+                flex: 0 1 auto; 
+                margin-left: 20px;
+            }
+            & ~ .search-wrapper {
+                margin-top: 20px;
+                display: none;
+            }
+            
+        }
+        & .btn-show {
+          margin-top: 10px;
+          color: $color-white; 
+          font-size: $text-sm;  
+         & svg {
+             margin-top: -2px;
+             margin-right:2px ;
+          }
+        }
+    }
+    
+}
+@media screen and (max-width: 62.8rem) {
+    .hero-wrapper {
+        padding-top: 133.4%;
+    }
+    .hero-content {
+        & .hero-content-heading {
+            text-align: center;
+            & h1 {
+                font-size: 2.4rem;
+            }
+            & p {
+               font-size: 1.5rem;
+            }
+        }
+    }
+   .input-item ~ .input-item {
+        margin-left: 0 !important;
+        margin-top: 5px;
+   }
+   .btn-search {
+    margin-left: 0 !important;
+    margin-top: 5px;
+    height: 40px;
+   }
+   .search-wrapper ~ .search-wrapper {
+    margin-top: 10px !important;
+   }
+}

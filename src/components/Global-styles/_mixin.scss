@@ -1,0 +1,12 @@
+@mixin flex-content-items($center , $items) {
+    display: flex;
+    align-items: $items;
+    justify-content: $center;
+}
+@mixin line-clamp($row) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $row;
+    max-width: 100%;
+}

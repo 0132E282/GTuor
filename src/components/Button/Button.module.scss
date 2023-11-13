@@ -1,0 +1,20 @@
+@import '../../components/Global-styles/variables';
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.btn-primary {
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    &:hover {
+        background-color: #1EC6B6;
+    }
+}

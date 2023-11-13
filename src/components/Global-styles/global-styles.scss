@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import './_variables.scss';
+@import './mixin';
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.5;
+    font-family: $font-primary , Arial, Helvetica, sans-serif;
+}
+
+img,video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+a {
+    text-decoration: none;
+}
+ul,ol { 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    max-width: 1425px;
+    margin: 0 auto;
+    padding: 0 90px;
+}
+// rounded 
+.rounded-md {
+    border-radius: 5px !important;
+}
+.rounded-full {
+    border-radius: 999px !important;
+}
+// gird
+.grid {
+   display: grid !important;
+}
+
+.col-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+.col-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+.col-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+.gap-20 {
+    gap: 20px !important;
+}
+.gap-30 {
+    gap: 30px !important;
+}
+.gap-7 {
+    gap: 7px !important;
+}
+// 
+h1, h2, h3, h4, h5, h6,p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+.p {
+    margin: 0;
+    padding: 0;
+}
+.w-1\/4 {
+    max-width: calc(100% / 4);
+    width: 100%;
+}
+// input
+input,select{
+    outline: none;
+    border: none;
+}
+select {
+   -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+// display
+.block {
+    display: block !important;
+}
+.flex {
+    display: flex !important;
+}
+.none {
+    display: none !important;
+}
+.section-heading{
+    text-align: center;
+    & h2 {
+        font-size: $text-4xl;
+        color: black;
+    }
+    & p {
+        font-size: $text-md;
+        color: #8d9199;
+    }
+}
+.mt-50 {
+    margin-top: 50px !important;
+}
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+.line-clamp-2 {
+    @include line-clamp(2);
+}
+@media screen and (max-width: 62.8rem) {
+    .section-heading{
+        padding: 30px 0 30px 0!important;
+        & h2 {
+            font-size: 2.4rem;
+        }
+
+    }
+    .container {
+        width: 100%;
+        padding: 0 20px ;
+    }
+
+    .ms\:none {
+        display: none !important;
+    }
+    .ms\:flex-column {
+        flex-direction: column !important;
+    }
+    .ms\:py-20{
+        padding: 0 20px !important;
+    }
+    .ms\:py-0{
+        padding-left: 0  !important;
+        padding-right: 0  !important;
+    }
+    .ms\:w-full {
+        max-width: 100% !important;
+    }
+    .ms\:m-0{
+        margin: 0 !important;
+    }
+    .ms\:col-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+
+    }
+}

@@ -1,0 +1,41 @@
+.card-banner {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 104%;
+    transition: all 0.15s ease;
+    box-shadow: 0 22px 40px rgba(0,0,0,.15);
+    &:hover {
+        transform: translateY(-5px);
+    }
+    & a{
+        width: 100%;
+        display: block;
+        .bg-images {
+            position: absolute;
+            inset: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &::before {
+            content: "";
+            background-color: rgb(0 0 0 / 14%);
+            position: absolute;
+            inset: 0;
+            display: block;
+            z-index: 1;
+        }
+    }
+    & p {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 5px 15px 15px 15px;
+        z-index: 99;
+        color: white;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+    
+}
