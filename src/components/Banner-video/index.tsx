@@ -8,7 +8,7 @@ const BannerVideo = () => {
     const cx = useClassnames({styles})
   return (
     <div className={cx('banner-wrapper')}>
-        <video className={cx('banner-video')} autoPlay={true} loop   >
+        <video className={cx('banner-video')} autoPlay={true} loop muted  >
           <source src={videos.videoBanner}/>
         </video>
     </div>

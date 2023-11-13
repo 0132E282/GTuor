@@ -51,8 +51,11 @@
     .footer-end{
         padding: 20px 30px 10px;
         .footer-end_wrapper {
-            flex-direction: column;
+            flex-direction: column-reverse;
             align-items: flex-start;
+           & .footer_menu {
+                margin-bottom: 10px;
+            }
         }
     }
 }
